@@ -7,7 +7,7 @@ import os
 db = SQLAlchemy()
 migrate = Migrate()
 
-def create_app():
+def create_app(*args, **kwargs):
     app = Flask(__name__)
 
     # SECRET KEY
@@ -43,4 +43,5 @@ def create_app():
     from .utility_routes import utility
     app.register_blueprint(utility)
     
+
     return app
