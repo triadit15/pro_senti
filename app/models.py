@@ -294,5 +294,4 @@ class UtilityPurchase(db.Model):
     details = db.Column(db.String(200))     # phone, meter, brand, ticket type
     status = db.Column(db.String(20), default="completed")
 
->>>>>>> 7762d9128f8de91025cf4a55232aad8b63d6ce04
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
