@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 alembic==1.16.5
 bcrypt==4.3.0
 blinker @ file:///C:/b/abs_b1i87khtob/croot/blinker_1737448732095/work
@@ -25,3 +26,27 @@ SQLAlchemy @ file:///C:/b/abs_01jvxay_0k/croot/sqlalchemy_1752524450450/work
 typing_extensions @ file:///C:/b/abs_0ffjxtihug/croot/typing_extensions_1734714875646/work
 Werkzeug @ file:///C:/b/abs_c7bupijx2_/croot/werkzeug_1737448709012/work
 WTForms @ file:///Users/ktietz/demo/mc3/conda-bld/wtforms_1629354749392/work
+=======
+Flask==3.0.3
+Flask-Login==0.6.3
+Flask-Migrate==4.1.0
+Flask-SQLAlchemy==3.1.1
+Flask-WTF==1.2.1
+Jinja2==3.1.6
+Werkzeug==3.1.4
+SQLAlchemy==2.0.36
+alembic==1.13.2
+bcrypt==4.2.0
+blinker==1.9.0
+click==8.1.7
+dnspython==2.8.0
+email_validator==2.2.0
+idna==3.11
+itsdangerous==2.2.0
+MarkupSafe==3.0.3
+packaging==25.0
+pillow==11.0.0
+qrcode==8.2
+gunicorn==23.0.0
+typing_extensions==4.15.0
+>>>>>>> 7762d9128f8de91025cf4a55232aad8b63d6ce04

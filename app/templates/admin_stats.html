@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "base.html" %}
 {% block title %}System Stats{% endblock %}
 
@@ -13,4 +14,21 @@
 </div>
 
 <a href="{{ url_for('main.admin_home') }}" class="btn btn-dark w-100">Back</a>
+=======
+{% extends "base.html" %}
+{% block title %}System Stats{% endblock %}
+
+{% block content %}
+<h3 class="mb-3">System Stats</h3>
+
+<div class="card p-3 mb-3">
+  <h5>Total Merchant Payments: {{ payments }}</h5>
+</div>
+
+<div class="card p-3 mb-3">
+  <h5>Total Vouchers Created: {{ vouchers }}</h5>
+</div>
+
+<a href="{{ url_for('main.admin_home') }}" class="btn btn-dark w-100">Back</a>
+>>>>>>> 7762d9128f8de91025cf4a55232aad8b63d6ce04
 {% endblock %}

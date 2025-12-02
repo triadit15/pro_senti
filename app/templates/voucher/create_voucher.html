@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "base.html" %}
 {% block title %}Create Voucher — Senti{% endblock %}
 
@@ -16,4 +17,24 @@
     </form>
   </div>
 </div>
+=======
+{% extends "base.html" %}
+{% block title %}Create Voucher — Senti{% endblock %}
+
+{% block content %}
+<h3 class="fw-bold mb-4">Create Voucher</h3>
+
+<div class="card shadow-sm">
+  <div class="card-body">
+    <form method="POST">
+      <div class="mb-3">
+        <label class="form-label">Amount</label>
+        <input type="number" step="0.01" name="amount" class="form-control" required>
+      </div>
+
+      <button class="btn btn-primary w-100">Generate Voucher</button>
+    </form>
+  </div>
+</div>
+>>>>>>> 7762d9128f8de91025cf4a55232aad8b63d6ce04
 {% endblock %}
