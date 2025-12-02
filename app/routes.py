@@ -311,9 +311,9 @@ def qr_scanner():
     # keep endpoint name stable: 'main.qr_scanner'
     return render_flexible_template("scan.html")
 
-# =========================================================
+# =
 # MERCHANT / PAYMENT (STATIC QR)
-# =========================================================
+# =
 
 @bp.route("/merchant/create_payment", methods=["GET", "POST"])
 @login_required
@@ -392,9 +392,9 @@ def merchant_payment_list():
     records = MerchantPayment.query.filter_by(merchant_id=current_user.id).all()
     return render_flexible_template("merchant/payment_list.html", payments=records)
 
-# =========================================================
+# =
 # VOUCHER SYSTEM
-# =========================================================
+# =
 
 @bp.route("/merchant/create_voucher", methods=["GET", "POST"])
 @login_required

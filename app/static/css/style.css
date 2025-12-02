@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /* style.css — Light Blue Fintech theme (#0d6efd) */
 
 :root{
@@ -82,7 +82,7 @@ body{
 @media (max-width:991px){
   .app-sidebar{display:none}
   .app-content{margin-left:0;padding:16px}
-=======
+
 /* style.css — Light Blue Fintech theme (#0d6efd) */
 
 :root{
@@ -166,5 +166,5 @@ body{
 @media (max-width:991px){
   .app-sidebar{display:none}
   .app-content{margin-left:0;padding:16px}
->>>>>>> 7762d9128f8de91025cf4a55232aad8b63d6ce04
+
 }

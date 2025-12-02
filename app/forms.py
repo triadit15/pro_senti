@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # app/forms.py
 
 from flask_wtf import FlaskForm
@@ -65,7 +65,7 @@ class CreateVoucherForm(FlaskForm):
         validators=[DataRequired(), NumberRange(min=0.01)],
         places=2
     )
-=======
+
 # app/forms.py
 
 from flask_wtf import FlaskForm
@@ -132,5 +132,5 @@ class CreateVoucherForm(FlaskForm):
         validators=[DataRequired(), NumberRange(min=0.01)],
         places=2
     )
->>>>>>> 7762d9128f8de91025cf4a55232aad8b63d6ce04
+
     submit = SubmitField("Create Voucher")

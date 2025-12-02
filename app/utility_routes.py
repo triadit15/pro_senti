@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from flask import Blueprint, render_template, request, redirect, flash, url_for
 from flask_login import login_required, current_user
 from . import db
@@ -45,7 +45,7 @@ def utility_buy(category):
     db.session.commit()
 
     flash("Utility purchase successful!", "success")
-=======
+
 from flask import Blueprint, render_template, request, redirect, flash, url_for
 from flask_login import login_required, current_user
 from . import db
@@ -92,5 +92,5 @@ def utility_buy(category):
     db.session.commit()
 
     flash("Utility purchase successful!", "success")
->>>>>>> 7762d9128f8de91025cf4a55232aad8b63d6ce04
+
     return redirect(url_for("main.wallet"))

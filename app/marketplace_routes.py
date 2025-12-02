@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from flask import Blueprint, render_template, request
 from flask_login import login_required, current_user
 from .models import Store, Product
@@ -30,7 +30,7 @@ def view_store(store_id):
 @login_required
 def view_product(product_id):
     product = Product.query.get_or_404(product_id)
-=======
+
 from flask import Blueprint, render_template, request
 from flask_login import login_required, current_user
 from .models import Store, Product
@@ -62,5 +62,5 @@ def view_store(store_id):
 @login_required
 def view_product(product_id):
     product = Product.query.get_or_404(product_id)
->>>>>>> 7762d9128f8de91025cf4a55232aad8b63d6ce04
+
     return render_template("market/product.html", product=product)

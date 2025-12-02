@@ -2,9 +2,9 @@ from datetime import datetime
 from flask_login import UserMixin
 from . import db
 
-# ============================================================
+# ====
 # USER MODEL
-# ============================================================
+# ====
 
 class User(UserMixin, db.Model):
     __tablename__ = "users"
@@ -21,9 +21,9 @@ class User(UserMixin, db.Model):
         return str(self.id)
 
 
-# ============================================================
+# ====
 # WALLET TRANSACTION LOG
-# ============================================================
+# ====
 
 class WalletTransaction(db.Model):
     __tablename__ = "wallet_transactions"
@@ -36,9 +36,9 @@ class WalletTransaction(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
 
-# ============================================================
+# ====
 # MERCHANT PAYMENT
-# ============================================================
+# ====
 
 class MerchantPayment(db.Model):
     __tablename__ = "merchant_payments"
@@ -55,9 +55,9 @@ class MerchantPayment(db.Model):
     paid_at = db.Column(db.DateTime)
 
 
-# ============================================================
+# ====
 # VOUCHERS
-# ============================================================
+# ====
 
 class Voucher(db.Model):
     __tablename__ = "vouchers"
@@ -73,9 +73,9 @@ class Voucher(db.Model):
     redeemed_at = db.Column(db.DateTime)
 
 
-# ============================================================
+# ====
 # STORE + MARKETPLACE MODELS
-# ============================================================
+# ====
 
 class Store(db.Model):
     _tablename_ = "stores"
@@ -128,9 +128,9 @@ class MarketplaceOrder(db.Model):
     details = db.Column(db.Text)
 
 
-# ============================================================
+# ====
 # UTILITY PURCHASE
-# ============================================================
+# ====
 
 class UtilityPurchase(db.Model):
     __tablename__ = "utility_purchases"
