@@ -1,0 +1,30 @@
+# Virtual environments
+venv/
+env/
+senti_env/
+
+# Python cache
+_pycache_/
+*.pyc
+*.pyo
+
+# Editor folders
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+
+# Database (local only)
+instance/
+*.db
+*.sqlite3
+
+# Render or Heroku build stuff
+*.log
+
+# PyCharm stuff
+*.iml
+
+# Env vars (never commit secrets)
+.env
