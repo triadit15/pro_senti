@@ -78,7 +78,7 @@ class Voucher(db.Model):
 # ====
 
 class Store(db.Model):
-    _tablename_ = "stores"
+    __tablename__ = "stores"
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120), nullable=False)
     domain = db.Column(db.String(255), nullable=True)
