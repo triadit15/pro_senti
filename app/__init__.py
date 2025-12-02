@@ -10,22 +10,26 @@ migrate = Migrate()
 def create_app():
     app = Flask(__name__)
 
-    # Secret key from Render env
-    app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "dev_key_fallback")
+    # SECRET KEY
+    app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "dev_key")
 
-    # Database: Render provides DATABASE_URL for PostgreSQL
-    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get(
-        "DATABASE_URL",
-        "sqlite:///senti.db"  # fallback for local development
-    )
+    # DATABASE CONFIG (Render or local)
+    db_url = os.environ.get("DATABASE_URL")
+
+    if db_url:
+        if db_url.startswith("postgres://"):
+            db_url = db_url.replace("postgres://", "postgresql://", 1)
+        app.config["SQLALCHEMY_DATABASE_URI"] = db_url
+    else:
+        app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///senti.db"
 
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
-    # Initialize extensions
+    # INIT EXTENSIONS
     db.init_app(app)
     migrate.init_app(app, db)
 
-    # Login manager setup
+    # LOGIN MANAGER
     login_manager = LoginManager()
     login_manager.login_view = "main.login"
     login_manager.init_app(app)
@@ -36,7 +40,7 @@ def create_app():
     def load_user(user_id):
         return User.query.get(int(user_id))
 
-    # Register blueprints
+    # BLUEPRINTS
     from .routes import bp as main_bp
     app.register_blueprint(main_bp)
 
