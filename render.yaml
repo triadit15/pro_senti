@@ -2,17 +2,21 @@ services:
   - type: web
     name: senti-app
     env: python
-    region: frankfurt   # OR oregon – it doesn't break anything
+    region: oregon
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn wsgi:app
-
-    # THIS IS THE IMPORTANT PART
-    # This runs flask db upgrade on every deploy
-    releaseCommand: >
-      flask db upgrade
-
     envVars:
-      - key: FLASK_APP
-        value: wsgi.py
+      - key: SECRET_KEY
+        sync: false
       - key: DATABASE_URL
-        value: sqlite:///database.db
+        fromDatabase:
+          name: senti-db
+          property: connectionString
+
+    # ⭐ THIS PART RUNS YOUR MIGRATIONS AUTOMATICALLY
+    releaseCommand: flask db upgrade
+
+databases:
+  - name: senti-db
+    region: oregon
