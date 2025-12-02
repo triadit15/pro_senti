@@ -7,7 +7,7 @@ import os
 db = SQLAlchemy()
 migrate = Migrate()
 
-def create_app(*args, **kwargs):
+def create_app():
     app = Flask(__name__)
 
     # SECRET KEY
@@ -45,3 +45,4 @@ def create_app(*args, **kwargs):
     
 
     return app
+
